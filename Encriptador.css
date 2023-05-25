@@ -1,0 +1,137 @@
+body{
+    background-color: #e0d5f1;
+}
+
+.alura{
+    padding: 40px 0 0 84px;
+    margin: 0 0 auto;
+}
+
+.encriptador{
+    margin: 100px auto  auto 240px;
+}
+
+.encriptador input{
+    border: none;
+    color: #8f64c7;
+    background-color: #e0d5f1;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    outline: none;
+    margin: 0 0 393px;
+}
+
+input::placeholder{
+    color: #8f64c7;
+    border: none;
+    outline: none;
+}
+
+.encriptador p{
+    font-family: 'Inter', sans-serif;
+    color: #a77add;
+}
+
+.encriptador i{
+    margin-right: 8px;
+}
+
+.botones button{
+    width: 328px;
+    height: 67px;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+#encriptar{
+    background-color: #8f5ecf;
+    margin-right: 24px;
+}
+#desencriptar{
+    background-color: #8b6cd4;
+}
+
+.desencriptar{
+    position: absolute;
+    background-color: #d3c4e6;
+    right: 0px;
+    top:0;
+    width: 400px;
+    border-radius: 32px;
+    margin: 40px;
+    margin-right: 100px;
+    padding-bottom: 132px;
+    box-shadow: 0px 24px 32px -8px rgba(151, 58, 250, 0.08);
+}
+
+.desencriptar img{
+    margin: 143px 32px 0 32px; 
+}
+
+.textoNoEncontrado{
+    margin: 38px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.desencriptar p:nth-child(1){
+    font-size: 24px;
+    color: #6f4bad;
+}
+
+.desencriptar p:nth-child(2){
+    font-size: 16px;
+    color: #a77add;
+}
+
+.desencriptar textarea{
+    display: none;
+    font-family: 'Inter', sans-serif;
+    background-color: #d3c4e6;
+    color: #8f5ecf;
+    width: 336px;
+    margin: 32px 32px 468px 32px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#copiar{
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    background-color: #8b6cd4;
+    width: 328px;
+    height: 67px;
+    border-radius: 20px;
+    border: none;
+    margin: 32px 32px 32px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 900px) {
+    .encriptador{
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .encriptador p{
+        margin: 20px auto;
+    }
+    
+    .botones button:nth-child(1){
+        margin-bottom: 10px;
+        margin-right: auto;
+    }
+
+    .desencriptar{
+        position: relative;
+        margin: 0 auto ;
+        width: 100%;
+    }
+}

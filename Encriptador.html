@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Encriptador.css">
+    <script type="text/javascript" src="Encriptador.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Encriptador Alura</title>
 </head>
 <body>
 
-    <header>
+    <header class="alura">
 
         <div class="logo"> <img src="Vector.svg" alt="Logo de Alura"> </div>
 
@@ -16,19 +23,55 @@
 
     <main>
 
-        
-        <textarea id="encriptar" cols="30" rows="10" type="Text">Escribe un texto aquí</textarea>
+        <div class="encriptador">
 
-        <button>Encriptar</button>
-        <button>Desencriptar</button>
-        <button>Copiar</button>
-        
+            <input type="text" id="textoEncriptado" placeholder="Ingresé un texto">
+
+            <p><i class="fa-sharp fa-solid fa-circle-exclamation"></i>Solo letras minúsculas y sin acento </p>
+
+            <div class="botones">
+            
+                <button type="button" id="encriptar">Encriptar</button>
+                <button type="button" id="desencriptar">Desencriptar</button>
+            
+            </div>
+            
+        </div>
+
+        <div class="desencriptar">
+
+            <div id="noSeEncontro">
+
+                <img class="imagen" src="Dibujo.svg" alt="Dibujo de una persona con una lupa">
+                
+                <div class="textoNoEncontrado">
+
+                    <p>No se encontró ningún mensaje</p>
+                    <p>Ingresé un texto a desencriptar o encriptar</p>
+            
+                </div>
+
+            </div> 
+
+                <textarea name="Resultado" id="textoDesencriptado" cols="30" rows="10" type="Text"></textarea>
+
+                <button type="button" id="copiar">Copiar</button>
+
+        </div>
+
     </main>
 
-    <footer>
+    <script>
 
+        var btnEncriptar = document.querySelector("#encriptar"); /*(querySelector seleciona al elemeto)creamos una variable llamada "btnEncriptador" que busque en el documento un elemeto con id "encriptar" */
+        btnEncriptar.onclick = encriptar;  /*y al presionarlo ya el boton que esta enlazado a su variable "btnEncriptador" activa la funcion del js gracias al onclick del js "encriptar"*/
+        
+        var btnDesencriptar = document.querySelector("#desencriptar"); 
+        btnDesencriptar.onclick = desencriptar;     
+        
+        var btnCopiar = document.querySelector("#copiar"); 
+        btnCopiar.onclick = copiar;
 
-    </footer>
-
+    </script>
 </body>
 </html>
